@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="indexcss.css">
+</head>
+
+<body>
+    <main>
+        <article class="haveborder">
+            <form method="post" name="form_create_user" onsubmit="addNewUser()">
+                <header>
+                    <p>
+                        Create new User
+                    </p>
+                </header>
+                <div class="top">
+                    <p>
+                        First Name: <br>
+                        <input type="text" name="input_first_name" class="primaryin">
+                    </p>
+                    <p>
+                        Last Name: <br>
+                        <input type="text" name="input_last_name" class="primaryin input_last_name">
+                    </p>
+                    <p>
+                        Age: <br>
+                        <input type="text" name="input_age" class="primaryin">
+                    </p>
+                    <p>
+                        City: <br>
+                        <input type="text" name="input_city" class="primaryin">
+                    </p>
+                </div>
+                <div class="bottom">
+                    <p>
+                        List of Interests:
+                        <select name="list_interests" id="" class="primaryin">
+                            <option value="programming">Programming</option>
+                            <option value="Reading">Reading</option>
+                            <option value="Basketball">Basketball</option>
+                        </select>
+                        or
+                        <input type="text" name="input_interests" placeholder="Type your own interest" class="primaryin">
+                    </p>
+                    <p>
+                        <button class="primarybtn" type="submit">
+                            Create
+                        </button>
+                    </p>
+                </div>
+            </form>
+        </article>
+        <article>
+            <header>
+                <p>
+                    List of Users
+                </p>
+            </header>
+            <table class="list">
+                <tr class="listhead">
+                    <th>User name</th>
+                    <th>Age</th>
+                    <th>City</th>
+                    <th>Interests</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>Bruce Wayne</td>
+                    <td>35</td>
+                    <td>Gotham</td>
+                    <td>Reading, Help people</td>
+                    <td><button>x</button></td>
+                </tr>
+            </table>
+        </article>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+body{
+    font-size: 16px;
+}
+
+main{
+    display: flex;
+    width: 100%;
+}
+header{
+    font-weight: bold;
+    font-size: 32px;
+    text-align: center;
+    color: #018786;
+}
+
+main>article{
+    display: inline-block;
+    width: 50%;
+    padding: 30px;
+}
+
+.haveborder{
+    border-right: 1px solid #999;
+}
+
+.primaryin{
+    padding: 4px;
+    border: 1px solid #018786;
+    border-radius: 5px;
+}
+
+.primarybtn{
+    font-weight: 500;
+    background: #FFF;
+    color: #018786;
+    border: 2px solid #018786;
+    border-radius: 20px;
+    padding: 5px 70px;
+    float: right;
+    cursor: pointer;
+}
+
+.top>p>input{
+    width: 50%;
+}
+
+.list{
+    width: 100%;
+}
+
+th{
+    
+}
+
+tr{
+    height: 30px;
+}
+
+
+
