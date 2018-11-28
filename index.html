@@ -9,7 +9,7 @@
 <body>
     <main>
         <article class="haveborder">
-            <form method="post" name="form_create_user" onsubmit="addNewUser()">
+            <form method="post" name="form_create_user>
                 <header>
                     <p>
                         Create new User
@@ -18,36 +18,36 @@
                 <div class="top">
                     <p>
                         First Name: <br>
-                        <input type="text" name="input_first_name" class="primaryin">
+                        <input type="text" name="input_first_name" id="input_first_name" class="primaryin">
                     </p>
                     <p>
                         Last Name: <br>
-                        <input type="text" name="input_last_name" class="primaryin input_last_name">
+                        <input type="text" name="input_last_name" id="input_last_name" class="primaryin input_last_name">
                     </p>
                     <p>
                         Age: <br>
-                        <input type="text" name="input_age" class="primaryin">
+                        <input type="text" name="input_age" id="input_age" class="primaryin">
                     </p>
                     <p>
                         City: <br>
-                        <input type="text" name="input_city" class="primaryin">
+                        <input type="text" name="input_city" id="input_city" class="primaryin">
                     </p>
                 </div>
                 <div class="bottom">
                     <p>
                         List of Interests:
-                        <select name="list_interests" id="" class="primaryin">
+                        <select name="list_interests" id="list_interests" class="primaryin">
                             <option value="programming">Programming</option>
                             <option value="Reading">Reading</option>
                             <option value="Basketball">Basketball</option>
                         </select>
                         or
-                        <input type="text" name="input_interests" placeholder="Type your own interest" class="primaryin">
+                        <input type="text" name="input_interests" id="input_interests" placeholder="Type your own interest" class="primaryin">
                     </p>
                     <p>
-                        <button class="primarybtn" type="submit">
+                        <a class="primarybtn" type="submit" onclick="addNewUser()">
                             Create
-                        </button>
+                        </a>
                     </p>
                 </div>
             </form>
@@ -59,7 +59,7 @@
                 </p>
             </header>
             <table class="list">
-                <tr class="listhead">
+                <tr class="listhead" id="listhead">
                     <th>User name</th>
                     <th>Age</th>
                     <th>City</th>
