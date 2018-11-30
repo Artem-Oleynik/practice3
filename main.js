@@ -13,7 +13,7 @@ function addNewUser(){
 }
 
 //добавить юзера в таблицу
-function checkonAsync(){
+function writeUser(){
 	var indexLast = window.list_users.length-1;
 	var table = document.getElementById('list');
 
