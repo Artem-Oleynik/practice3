@@ -9,20 +9,27 @@ function addNewUser(){
 	var inputinterests = document.getElementById('input_interests').value;
 
 	window.list_users[window.list_users.length] = new User(first_name, last_name, age, city, interests, inputinterests);
-	checkonAsync();
+	writeUser();
 }
 
-//проверка на асинхронизацию с html разметкой
+//добавить юзера в таблицу
 function checkonAsync(){
-	var countUsers = document.getElementsByTagName('tr').length;
 	var indexLast = window.list_users.length-1;
-	// if((countUsers-1) == window.list_users.length){
-	document.getElementById('listhead').innerHTML += '<tr><td>' + window.list_users[indexLast].first_name +' '+ window.list_users[indexLast].last_name + '</td><td>'+ window.list_users[indexLast].age +'</td><td>Gotham</td><td>' + window.list_users[indexLast].interests + checkonValue(window.list_users[indexLast].inputinterests) + '</td><td><button>x</button></td></tr>';
-	//'
-	// alert(indexLast);
-	// }
+	var table = document.getElementById('list');
+
+	table.innerHTML += '<tr id="slot-added'+indexLast+'"><td id="slot-name'+indexLast+'"></td><td id="slot-age'+indexLast+'"></td><td id="slot-city'+indexLast+'"></td><td id="slot-interests'+indexLast+'"></td><td><button onClick="del('+indexLast+')">x</button></td></tr>';
+	document.getElementById('slot-name'+indexLast).innerHTML = '<td id="slot-name'+indexLast+'">' + window.list_users[indexLast].first_name +' '+ window.list_users[indexLast].last_name +'</td>';
+	document.getElementById('slot-age'+indexLast).innerHTML = '<td id="slot-age'+indexLast+'">' + window.list_users[indexLast].age + '</td>';
+	document.getElementById('slot-city'+indexLast).innerHTML = '<td id="slot-city'+indexLast+'">'+ window.list_users[indexLast].city +'</td>';
+	document.getElementById('slot-interests'+indexLast).innerHTML = '<td id="slot-interests'+indexLast+'">' + window.list_users[indexLast].interests + checkonValue(window.list_users[indexLast].inputinterests) + '</td>';
 }
 
+//удалисть indDel-го юзера
+function del(indDel){
+	document.getElementById('slot-added'+indDel).remove();
+}
+
+//проверить есть ли текст в переменной
 function checkonValue(value){
 	if(value != null && value.length != 0){
 		return ', '+value;
