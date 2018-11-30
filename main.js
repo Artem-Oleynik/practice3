@@ -17,7 +17,7 @@ function writeUser(){
 	var indexLast = window.list_users.length-1;
 	var table = document.getElementById('list');
 
-	table.innerHTML += '<tr id="slot-added'+indexLast+'"><td id="slot-name'+indexLast+'"></td><td id="slot-age'+indexLast+'"></td><td id="slot-city'+indexLast+'"></td><td id="slot-interests'+indexLast+'"></td><td><button onClick="del('+indexLast+')">x</button></td></tr>';
+	table.innerHTML += '<tr id="slot-added'+indexLast+'"><td id="slot-name'+indexLast+'"></td><td id="slot-age'+indexLast+'"></td><td id="slot-city'+indexLast+'"></td><td id="slot-interests'+indexLast+'"></td><td><button class="secondbtn" onClick="del('+indexLast+')">x</button></td></tr>';
 	document.getElementById('slot-name'+indexLast).innerHTML = '<td id="slot-name'+indexLast+'">' + window.list_users[indexLast].first_name +' '+ window.list_users[indexLast].last_name +'</td>';
 	document.getElementById('slot-age'+indexLast).innerHTML = '<td id="slot-age'+indexLast+'">' + window.list_users[indexLast].age + '</td>';
 	document.getElementById('slot-city'+indexLast).innerHTML = '<td id="slot-city'+indexLast+'">'+ window.list_users[indexLast].city +'</td>';

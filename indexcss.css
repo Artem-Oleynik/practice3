@@ -49,6 +49,7 @@ main>article{
 }
 
 th{
+<<<<<<< HEAD
     
 }
 
@@ -56,5 +57,23 @@ tr{
     height: 30px;
 }
 
+.listhead {
+    background: #f2f2f2;
+    text-align: left;
+}
 
+tr{
+    height: 40px;
+}
+
+td.forbtn{
+    text-align: center;
+}
+
+.secondbtn{
+    cursor: pointer;
+    background: #fff;
+    border: 0px;
+    font-weight: bold;
+}
 
